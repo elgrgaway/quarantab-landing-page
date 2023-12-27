@@ -108,7 +108,7 @@ body {
 section {
   display: flex;
   align-items: center;
-  gap: var(--default-padding);
+  gap: calc(var(--default-padding) * 2);
   .section-item {
     flex: 1;
   }
