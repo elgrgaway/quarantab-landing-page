@@ -1,0 +1,326 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.3;
+  overflow-x: hidden;
+}
+
+:root {
+  --color-soft-blue: #5368df;
+  --color-soft-red: #fa5757;
+  --color-grayish-blue: #9194a1;
+  --color-very-dark-blue: #252b46;
+  --color-off-white: #f7f7f7;
+  --default-padding: 2rem;
+  --default-radius: 0.4rem;
+  --desktop-width: 900px;
+  --tablet-width: 600px;
+  --timing-animation: 0.2s;
+}
+
+.container {
+  padding: 0 var(--default-padding);
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 8rem;
+}
+.container section {
+  width: 100%;
+}
+.container .logo {
+  width: 4rem;
+  height: 4rem;
+}
+.container header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--default-padding);
+  font-weight: 500;
+}
+.container header .logo-container {
+  display: flex;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  align-items: center;
+}
+.container header h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.container header nav ul {
+  font-weight: 400;
+  display: flex;
+  -moz-column-gap: var(--default-padding);
+       column-gap: var(--default-padding);
+}
+.container header .nav__link:hover {
+  color: var(--color-soft-red);
+}
+
+.button {
+  background-color: var(--color-soft-blue);
+  color: var(--color-off-white);
+  padding: 1.2rem 2.4rem;
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  border-radius: var(--default-radius);
+  font-size: 1.2rem;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  gap: var(--default-padding);
+}
+section .section-item {
+  flex: 1;
+}
+section .info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-padding);
+}
+section .info .info__heading {
+  font-size: 4.2rem;
+}
+section .info .info__title {
+  font-size: 2.4ren;
+}
+section .info .info__text {
+  color: var(--color-grayish-blue);
+  font-size: 1.4rem;
+  max-width: 50rem;
+}
+section .info .section__button {
+  display: flex;
+  gap: var(--default-padding);
+  flex-wrap: wrap;
+}
+section .info .info__edge {
+  background-color: var(--color-off-white);
+  color: var(--color-very-dark-blue);
+}
+
+.browser-section {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: calc(var(--default-padding) / 2);
+}
+.browser-section .info {
+  gap: calc(var(--default-padding) / 2);
+}
+.browser-section .browsers {
+  margin-top: 4rem;
+  display: flex;
+  gap: calc(var(--default-padding) * 2);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.browser-section .browsers .browser {
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--default-padding) * 2) var(--default-padding) var(--default-padding);
+  flex: 1;
+}
+.browser-section .browsers .browser__img {
+  width: 6rem;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+.browser-section .browsers .browser__title {
+  font-size: 1.8rem;
+}
+.browser-section .browsers .browser__button {
+  position: relative;
+  margin-top: 5rem;
+}
+.browser-section .browsers .browser__button::before {
+  content: "";
+  width: 100%;
+  height: 0.3rem;
+  top: -30px;
+  left: 0;
+  background-image: url(/images/bg-dots.svg);
+  background-size: contain;
+  position: absolute;
+}
+.browser-section .browsers .fire-fox-button {
+  background-color: var(--color-grayish-blue);
+  cursor: not-allowed;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.question-container {
+  gap: 0;
+}
+
+.question:nth-of-type(1) {
+  margin-top: var(--default-padding);
+}
+
+.question {
+  max-width: 50rem;
+}
+.question .faq {
+  border-top: solid 0.1rem var(--color-very-dark-blue);
+  padding: var(--default-padding);
+}
+.question .faq:last-of-type {
+  border-bottom: solid 0.1rem var(--color-very-dark-blue);
+}
+.question input {
+  display: none;
+}
+.question label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.question .answer-1,
+.question .answer-2,
+.question .answer-3,
+.question .answer-4 {
+  font-size: 1.4rem;
+  padding-top: var(--default-padding);
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all var(--timing-animation);
+  text-align: start;
+}
+.question .arrow {
+  width: 1.2rem;
+  height: auto;
+  transition: var(--timing-animation) ease-in-out;
+}
+
+html:has(.checkbox-1:checked) .answer-1,
+html:has(.checkbox-2:checked) .answer-2,
+html:has(.checkbox-3:checked) .answer-3,
+html:has(.checkbox-4:checked) .answer-4 {
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+  transition: all var(--timing-animation);
+  padding-top: var(--default-padding);
+}
+
+@keyframes arrow-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+html:has(.checkbox-1:checked) .arrow-1,
+html:has(.checkbox-2:checked) .arrow-2,
+html:has(.checkbox-3:checked) .arrow-3,
+html:has(.checkbox-4:checked) .arrow-4 {
+  animation: arrow-rotate var(--timing-animation);
+  transform: rotate(180deg);
+}
+
+.foot {
+  color: var(--color-off-white);
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: var(--default-padding);
+  align-items: center;
+  font-size: 1.4rem;
+  width: 100%;
+}
+.foot .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: auto;
+}
+.foot .right {
+  font-weight: 400;
+}
+
+.foot::before {
+  content: "";
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  background-color: var(--color-very-dark-blue);
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+  .browsers {
+    flex-direction: column;
+  }
+  .screen {
+    order: -1;
+  }
+  .foot {
+    flex-direction: column;
+  }
+  .foot .left {
+    margin: 0 0 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */
